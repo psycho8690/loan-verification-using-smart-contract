@@ -1,0 +1,282 @@
+{
+    "abi": [
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "_borrower",
+                    "type": "address"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_loanAmount",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_mortgageValue",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_monthlyIncome",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_creditScore",
+                    "type": "uint256"
+                }
+            ],
+            "name": "addOrUpdateBorrower",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "borrower",
+                    "type": "address"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "uint256",
+                    "name": "loanAmount",
+                    "type": "uint256"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "enum LoanVerification.LoanStatus",
+                    "name": "loanStatus",
+                    "type": "uint8"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "uint256",
+                    "name": "mortgageValue",
+                    "type": "uint256"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "uint256",
+                    "name": "monthlyIncome",
+                    "type": "uint256"
+                }
+            ],
+            "name": "BorrowerUpdated",
+            "type": "event"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "_borrower",
+                    "type": "address"
+                },
+                {
+                    "internalType": "enum LoanVerification.LoanStatus",
+                    "name": "_loanStatus",
+                    "type": "uint8"
+                }
+            ],
+            "name": "updateLoanStatus",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "name": "borrowerAddresses",
+            "outputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "name": "borrowers",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "loanAmount",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "enum LoanVerification.LoanStatus",
+                    "name": "loanStatus",
+                    "type": "uint8"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "mortgageValue",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "monthlyIncome",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "creditScore",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "getAllBorrowers",
+            "outputs": [
+                {
+                    "internalType": "address[]",
+                    "name": "",
+                    "type": "address[]"
+                },
+                {
+                    "components": [
+                        {
+                            "internalType": "uint256",
+                            "name": "loanAmount",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "enum LoanVerification.LoanStatus",
+                            "name": "loanStatus",
+                            "type": "uint8"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "mortgageValue",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "monthlyIncome",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "creditScore",
+                            "type": "uint256"
+                        }
+                    ],
+                    "internalType": "struct LoanVerification.Borrower[]",
+                    "name": "",
+                    "type": "tuple[]"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "_borrower",
+                    "type": "address"
+                }
+            ],
+            "name": "getBorrower",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "enum LoanVerification.LoanStatus",
+                    "name": "",
+                    "type": "uint8"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "getBorrowerCount",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "loanAmount",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "mortgageValue",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "monthlyIncome",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "creditScore",
+                    "type": "uint256"
+                }
+            ],
+            "name": "validateLoan",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "pure",
+            "type": "function"
+        }
+    ],
+    "address": "0xac974b439c0f04581fa4431b8c15c08366f6cc5d"
+}
